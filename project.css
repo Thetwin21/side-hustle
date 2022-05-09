@@ -1,0 +1,263 @@
+:root {
+  --primary-color: #b9bebe;
+  --btnColor: rgb(27, 141, 207);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+ background-color: hsl(210, 67%, 1%);
+}
+/* container */
+.container {
+ width: 100vw;
+height: 100%;
+color: #fff;
+padding: 0 2rem;
+overflow: hidden;
+}
+/* header */
+.header {
+  width: 100%;
+  display: flex;
+  padding: 15px;
+justify-content: space-between;
+}
+.header ul li{
+  display: inline-block;
+}
+.header ul li {
+     padding-right: 2rem;
+     list-style: none;
+}
+.header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+/* main */
+.main {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+color: #fff;
+}
+.main p {
+    color: var(--primary-color);
+    margin: 1.2rem 0;
+    text-align: center;
+}
+.main button {
+padding: 8px 10px;
+color: #fff;
+background: var(--btnColor);
+text-align: center;
+border-radius: 4rem;
+width: 8rem;
+border: none;
+cursor: pointer;
+font-weight: 400;
+}
+
+/* services */
+
+.services {
+    display: grid;
+    text-align: center;
+    gap: 2em;
+}
+.services p {
+    color: var(--primary-color);
+}
+/* productive */
+.productive {
+    display: grid;
+    margin: 5rem 0;
+    /* gap: 1.2em; */
+    padding: 0 2rem;
+}
+.productive .img {
+  width: 100%;
+}
+.productive .img img{
+  width: 100%;
+  object-fit: cover;
+}
+.productive .content {
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+}
+.productive .content h2 {
+    font-size: 4vmin;
+    padding: 1.2rem 0;
+}
+.productive .content button {
+    width: 7rem;
+    padding: 5px 10px;
+
+}
+
+/* card */
+.card {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+text-align: initial;
+gap: 2rem;
+margin: 2em 0 10em 0;
+}
+.card div {
+    max-width: 20rem;
+    background: hsl(215, 55%, 4%);
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 10px 5rem;
+    padding-top: 10rem;
+
+}
+.contact-container .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    width: 100%;
+}
+.location {
+    width: 10rem;
+}
+.get-access {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: initial;
+    padding: 3em ;
+    margin: 10px auto;
+    background: hsl(215, 55%, 4%);
+    
+}
+.get-access .btn {
+    margin: 1.2rem 0;
+    width: 100%;
+}
+
+.get-access .btn button,
+.get-access .btn input {
+    padding: 10px;
+    border: none;
+    border-radius: 2em;
+    width: 17em;
+    margin: .7em 0;
+}
+
+.get-access .btn button {
+    cursor: pointer;
+    background: var(--btnColor);
+}
+.get-access .btn button:hover {
+    transform: scale(0.9);
+}
+@media (min-width: 798px){
+.main {
+    padding: 2rem 14rem;
+}
+.main button {
+    width: 12rem;
+    padding: 10px;
+}
+
+/* services */
+.services {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 12rem;
+    gap: 2em;
+}
+
+/* productive */
+.productive {
+    grid-template-columns: 1fr 1fr;
+}
+.contact-container {
+    width: 100%;
+    height: 17rem;
+    padding: 15px 5rem;
+    padding-top: 10rem;
+    
+}
+.contact-container .contact-info .nav-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.get-access {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    top: -7rem;
+    background: hsl(215, 55%, 4%);
+
+}
+/* .get-access .btn button,
+.get-access .btn input {
+    padding: 10px;
+    border: none;
+    border-radius: 2em;
+} */
+
+.get-access .btn input {
+    width: 18em;
+    text-indent: 10px;
+}
+
+.get-access .btn button {
+    width: 10rem;
+    cursor: pointer;
+    background: var(--btnColor);
+}
+
+}
+@media (max-width:456px){
+    .card div {
+            max-width: 100%;
+        }
+    .productive {
+        display: grid;
+        margin: 5rem 0;
+        /* gap: 1.2em; */
+        padding: 0 .8rem;
+    }
+ .contact-container {
+     flex-direction: column;
+     flex-wrap: nowrap;
+     width: 100%;
+     height: initial;
+     padding: 1rem;
+     padding-top: 10px;
+
+ }
+     .get-access {
+       width: 100%;
+       padding: 2em;
+       margin: 0;
+     }
+ .contact-container .nav-items {
+     display: block;
+ }
+}
